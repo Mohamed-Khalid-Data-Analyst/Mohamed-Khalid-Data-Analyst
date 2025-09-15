@@ -1883,10 +1883,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-.email-link {
-  white-space: normal !important;   /* allow wrapping */
-  word-break: break-all !important; /* break long text if needed */
-  text-overflow: unset !important;  /* remove the ... dots */
-  overflow: visible !important;     /* show full text */
-  display: inline-block;            /* keep spacing consistent */
+
+
+
+.contact-link {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  width: auto;
+  font-size: 14px;
+  padding: 5px 0;
+}
+.contact-info {
+  max-width: 100%;
+}
+.contact-item {
+  padding: 10px 0;
+}
+@media (max-width: 768px) {
+  .contact-link {
+    white-space: normal;
+    width: 100%;
+    overflow: visible;
+  }
 }
